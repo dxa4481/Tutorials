@@ -1,0 +1,7 @@
+This readthis file gives an overview of the tutorials I followed to get caught up on JS node and Express
+
+I followed this node tutorial which also covers basics of JS
+http://api.ning.com/files/BykvwnNi9LsiAdEnm6ZXvYglcjWIloUcyUlBiQtfoAJwO9*6D4jfZjcojdmAx6BAUogQLDkuTy*oRdMsMnXbwV1hYgekZadg/nodebeginner.pdf
+
+Then I did this tutorial on Express
+http://www.hacksparrow.com/express-js-tutorial.html
