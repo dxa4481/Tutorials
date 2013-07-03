@@ -3,7 +3,8 @@ extends layout
 block content
     #wrapper
         #logo
-            img(src='/images/logo.png')
+            a(href='/')
+                img(src='/images/logo.png')
         #display
             #login
                 form(method='post')
@@ -12,8 +13,4 @@ block content
                         input(type='text', name='username')
                         input(type='submit', value='Log In')
 
-        #footer
-            div Copyright © Ninja Store #{+new Date().getFullYear()}
-            a(href='/page?name=about') About
-            | |
-            a(href='/page?name=contact') Contact Us
+        include footer

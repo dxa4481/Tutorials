@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    #wrapper
+        #logo
+            a(href='/')
+                img(src='/images/logo.png')
+        #display
+            p!= content
+
+        include footer
