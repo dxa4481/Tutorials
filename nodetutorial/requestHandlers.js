@@ -56,7 +56,7 @@ function show(response) {
             response.write(error + "\n");
             response.end();
         } else {
-            response.writeHead(200, {"Content-Type": "image/png"});
+            //response.writeHead(200, {"Content-Type": "text/plain"});
             response.write(file, "binary");
             response.end();
         }

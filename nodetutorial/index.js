@@ -8,10 +8,12 @@
 
 var server = require("./server");
 var router = require("./router");
+var fs = require('fs');
 var requestHandlers = require("./requestHandlers");
 var handle = {}
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/upload"] = requestHandlers.upload;
 handle["/show"] = requestHandlers.show;
+fs.unlink("/tmp/test.png");
 server.start(router.route, handle);
