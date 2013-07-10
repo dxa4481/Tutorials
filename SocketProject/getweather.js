@@ -27,9 +27,10 @@ exports.getweather = function (location, sendweather, returninfo){
             temp = '' + temp;
             wind = xml.descendants('speed').attribute('name').toString();
             clouds = xml.descendants('clouds').attribute('name').toString();
+            weather =   xml.descendants('weather').attribute('value').toString();
 
             var info = "The temperature in " +  location + ", " + country + " is " + temp + "f. The wind is a "
-            info = info + wind + " and the cloud coverage is " + clouds;
+            info = info + wind + " and the cloud coverage is " + clouds + '. It is a ' + weather;
 
             sendweather(returninfo, info);
         })});

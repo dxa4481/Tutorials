@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+<style>
+    .orangegreen{
+        color : orange;
+        background : green;
+    }
+</style>
+
 <html>
 <head>
     <title></title>
 </head>
 <body>
-       <div id="messages">  </div>
+       <div id="messages"; class=orangegreen;>  </div>
        <input type="text" id="sendbox"/>
         <button onclick="Send()">"send"</button>
 </body>
@@ -20,7 +27,7 @@
     function getinput(){
         return document.getElementById("sendbox").value;
     }
-    var chatsocket = io.connect('http://172.21.48.173');
+    var chatsocket = io.connect(window.location.protocol+'//'+window.location.hostname);
     chatsocket.on('welcome',function(data){
         appendMessageToBox(data.hello + data.name),
         name = data.name});

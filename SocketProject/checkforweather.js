@@ -16,7 +16,7 @@ exports.weathercheck = function(incomingMessage, sendweather, returninfo){
             getweather.getweather(word,sendweather,returninfo);
             bool = false
         }
-        else if (word == 'weather' || word == 'Weather'){
+        else if (word == '/weather' || word == '/Weather'){
             bool = true;
         }
     });

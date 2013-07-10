@@ -51,6 +51,11 @@ var users = 0;
 var log = '';
 app.get('/',handler);
 console.log('test')
+xmpp.start();
+exports.webchatsend = function(message){
+    io.sockets.emit('Incoming_Messages',{ incoming: message });
+    log += message + "<br/>";
+}
 io.sockets.on('connection', function (socket) {
     users = users + 1;
     socket.emit('welcome', { hello: log + "<br/>" + 'welcome to chat, your designation is ', name: 'unicornfluffmaster'+ users});
